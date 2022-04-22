@@ -18,5 +18,6 @@ link: assemble compile
 
 clean: link
 	rm *.o
-calc_size $(ASM_SRCmak).asm:
+	
+calc_size $(ASM_SRC).asm:
 	$(ASM_BIN) -DCORES=4 -f elf64 -w+all -w+error -o $(ASM_SRC).o $(ASM_SRC).asm && size $(ASM_SRC).o
